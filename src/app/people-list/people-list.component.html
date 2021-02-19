@@ -1,1 +1,33 @@
-<p>people-list works!</p>
+<app-navbar></app-navbar>
+<div class="table-responsive-sm">
+    <h4 class="display-4">List of Cours</h4>
+    <div *ngIf="coursList.length == 0 " class="alert alert-warning">No Cours found</div>
+
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Cours</th>
+                <th scope="col">title</th>
+                <th scope="col">price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cours of coursList" class="table-responsive-sm">
+                <th>{{cours.id}}</th>
+                <td>{{cours.Cours}}</td>
+                <td>{{cours.title}}</td>
+                <td>{{cours.price}}</td>
+                <td>
+                    <button type="button" class="btn btn-outline-primary mx-2">Details</button>
+                    <button type="button" class="btn btn-outline-danger mx-2" (click)="delete(cours)">Delete</button>
+                    <button type="button" class="btn btn-outline-success mx-2">Update</button>
+
+
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>

@@ -1,12 +1,17 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" [routerLink]="['/']"> <img [src]="imageUrl" alt="formalab logo" width="100px" height="80px"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <form class="nav">
+            <a class="nav-link active" [routerLink]="['']">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link active" [routerLink]="['/people-list']">list-cours <span class="sr-only">(current)</span></a>
+        </form>
         <form class="form-inline my-2 my-lg-0 ml-auto">
-            <button class="btn btn-info my-2 my-sm-0" [routerLink]="['/login']">Login</button>
+
+            <button class="btn btn-primary mx-3 my-2 my-sm-0" [routerLink]="['/login']">Login</button>
             <button class="btn btn-primary mx-3 my-2 my-sm-0" [routerLink]="['/register']">Register</button>
         </form>
     </div>
