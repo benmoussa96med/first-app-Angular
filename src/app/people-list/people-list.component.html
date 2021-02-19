@@ -9,7 +9,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Cours</th>
                 <th scope="col">title</th>
-                <th scope="col">price</th>
+                <th scope="col">time</th>
                 <th></th>
             </tr>
         </thead>
@@ -18,7 +18,7 @@
                 <th>{{cours.id}}</th>
                 <td>{{cours.Cours}}</td>
                 <td>{{cours.title}}</td>
-                <td>{{cours.price}}</td>
+                <td>{{cours.hours}}</td>
                 <td>
                     <button type="button" class="btn btn-outline-primary mx-2">Details</button>
                     <button type="button" class="btn btn-outline-danger mx-2" (click)="delete(cours)">Delete</button>
